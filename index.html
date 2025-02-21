@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="range.css" />
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <header>BMI Calculator</header>
+        <form class="bmi-form" action="#">
+          <div class="gender">
+            <input
+              class="radio-mark"
+              type="radio"
+              name="gender"
+              id="male-gender"
+              value="male"
+              checked
+            />
+            <input
+              class="radio-mark"
+              type="radio"
+              name="gender"
+              id="female-gender"
+              value="female"
+            />
+            <div class="gender-card-container">
+              <label
+                class="gender-card gender-card-active"
+                for="male-gender"
+                id="male-card"
+              >
+                <object
+                  data="/assets/male.svg"
+                  type="image/svg+xml"
+                  class="gender-icon male-icon"
+                >
+                  Male Logo
+                </object>
+                <p>Male</p>
+              </label>
+              <label class="gender-card" for="female-gender" id="female-card">
+                <object
+                  data="/assets/female.svg"
+                  type="image/svg+xml"
+                  class="gender-icon female-icon"
+                >
+                  Female Logo
+                </object>
+                <p>Female</p>
+              </label>
+            </div>
+          </div>
+          <div class="height">
+            <label for="height">Height</label>
+            <p><span class="height-value">0</span>cm</p>
+            <input
+              class="height-input"
+              type="range"
+              name="height"
+              id="height-range"
+              min="0"
+              max="500"
+              value="0"
+            />
+          </div>
+          <div class="age-and-weight">
+            <div class="weight-card">
+              <p>Weight</p>
+              <p><span class="weight-value">0</span>Kg</p>
+              <div class="value-change-btns">
+                <button class="btn-negative weight-btn">-</button>
+                <button class="btn-positive weight-btn">+</button>
+              </div>
+            </div>
+            <div class="age-card">
+              <p>Age</p>
+              <p><span class="age-value">0</span></p>
+              <div class="value-change-btns">
+                <button class="btn-negative age-btn">-</button>
+                <button class="btn-positive age-btn">+</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn-calculate">Calculate</button>
+        </form>
+      </div>
+      <div class="result">
+        <header>Result</header>
+        <div class="result-value-container">
+          <p class="result-condition">Normal</p>
+          <p class="result-value">19.2</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
