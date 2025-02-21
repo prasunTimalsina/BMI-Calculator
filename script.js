@@ -90,7 +90,7 @@ const init = () => {
   ageValueEle.textContent = 0;
   weightValueEle.textContent = 0;
   heightRangeInput.value = 0;
-  resultConditionEle.textContent = "Caluclate first..";
+  resultConditionEle.textContent = "Calculate first..";
   resultValueEle.textContent = "";
 };
 
